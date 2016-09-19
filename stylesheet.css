@@ -1,0 +1,295 @@
+:root{
+    --verydark1-color: #001a33;     /*  Used for: Borders around buttons   */
+    --dark1-color: #003566;         /*  Used for: Main color for text, dark gradient on buttons */
+    --dark2-color: #b3b3ff;         /*  Used for: Background color for duration popup and background color for colorcontainer   */
+    --dark3-color: #8080ff;         /*  Used for: Light gradient on buttons     */
+    --bright1-color: #e6e6ff;       /*  Used for: Header background,    */
+    --bright2-color: #ccccff;       /*  Used for: Footer background     */
+    --menu1-color:  #e6e6ff;        /*  Main menubox color - maybe same as header?*/
+}
+
+body{
+    font-family: "Arial";
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Arial, sans-serif;
+    font-size: 1.25em;
+    color: var(--dark1-color);
+}
+
+
+
+input[type=text], input[type=number]{
+    padding: 1%;
+    width: 80%;
+    font-size: 1.3em;
+    box-sizing: border-box;
+    border: 0.1em solid #004280;
+    border-radius: 0.3em;
+    z-index: 10;
+}
+
+input[type=number]{
+    text-align: center;
+    width: 40%;
+}
+
+
+
+input[type=button], input[type=submit] {
+    padding: 1%;
+    width: 15%;
+    font-size: 1.3em;
+    color: white;
+    box-sizing: border-box;
+    background: var(--dark1-color); /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(var(--dark1-color), var(--dark3-color)); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(var(--dark1-color), var(--dark3-color)); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(var(--dark1-color), var(--dark3-color)); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(var(--dark1-color), var(--dark3-color)); /* Standard syntax */
+    border: 0.1em solid var(--verydark1-color);
+    border-radius: 0.3em;
+    cursor: pointer;
+    z-index: 10;
+}
+
+input[type=button]:hover, input[type=submit]:hover{
+    background: var(--dark3-color); /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(var(--dark3-color), var(--dark1-color)); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(var(--dark3-color), var(--dark1-color)); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(var(--dark3-color), var(--dark1-color)); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(var(--dark3-color), var(--dark1-color)); /* Standard syntax */
+}
+
+#header{
+    height: 25vh;
+    width: 100%;
+    position: relative;
+    float:left;
+    background-color: var(--bright1-color);
+    text-align: center;
+}
+
+#header p{
+    color: #003566;
+font-size: 1.7em;
+font-weight: bold;
+font-family: Arial, Helvetica;
+text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0,0,0,.1), 0 0 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3), 0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.2), 0 20px 20px rgba(0,0,0,.15);
+}
+
+#indexHeader{
+    margin-top: 7%
+}
+
+#shorten{
+    width: 80%;
+    position: absolute;
+    top: 30%;
+    left: 10%;
+    z-index: 10;
+}
+
+#duration{
+    font-size: .75em;
+    width: 20%;
+    height: 30%;
+    position: absolute;
+    top: 30%;
+    left: 20%;
+    border: 0.1em solid #004280;
+    box-sizing: border-box;
+    border-radius: 0.1em;
+}
+
+#duration input[type=button], #duration input[type=submit]{
+    width: 20%;
+    font-size: .75em;
+}
+
+#duration input[type=text]{
+    width: 30%;
+    font-size: .75em;
+}
+
+
+
+#footer{
+    position: relative;
+    height: 75vh;
+    width: 100%;
+    background-color: var(--bright2-color);
+    background-image: url(dark-circles.png);
+    clear: both;
+    text-align: center;
+}
+
+#option{
+    
+}
+
+.output{
+    position: absolute;
+    top: 15%;
+    left: 35%;
+    padding: 2%;
+    width: 30vw;
+    height: 20em;
+    font-size: 1.2em;
+    background: white;
+    -webkit-box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.75);
+    box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.75);
+    text-align: center;
+    z-index: 10;
+}
+
+#setDuration{
+    display: none;
+    height: 5em;
+    background-color: var(--dark2-color);
+}
+
+#setDuration input{
+    width: 40%
+    text-align: center;
+}
+
+#setDuration p{
+    font-size: .75em;
+}
+
+#shorturl{
+    font-size: 1.2em;
+    color: black;
+}
+
+#longurl{
+    font-family: Arial, sans-serif;
+    font-size: .75em;
+    color: black;
+    }
+
+#hide{
+    display: none;
+}
+
+#buttons button, #durationBtn{
+    margin-top: 5%;    
+    width: 8em;
+    height: 8em;
+    font-size: 1em;
+    color: white;
+    box-sizing: border-box;
+    border: 0.1em solid var(--verydark1-color);
+    background: var(--dark1-color); /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(var(--dark1-color), var(--dark3-color)); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(var(--dark1-color), var(--dark3-color)); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(var(--dark1-color), var(--dark3-color)); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(var(--dark1-color), var(--dark3-color)); /* Standard syntax */
+
+
+    border-radius: 1em;
+    cursor: pointer;
+}
+
+#buttons button:hover, #durationBtn:hover{
+    background: var(--dark3-color); /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(var(--dark3-color), var(--dark1-color)); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(var(--dark3-color), var(--dark1-color)); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(var(--dark3-color), var(--dark1-color)); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(var(--dark3-color), var(--dark1-color)); /* Standard syntax */
+}
+
+
+.btnContainer, .explaination{
+    margin-top: 20em;
+    margin-left: 2em;
+    margin-right: 2em;
+    display: inline-block;
+    width: 20em;
+    height: 40%;
+    box-sizing: border-box;
+    background-color: var(--dark2-color);
+    -webkit-box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.75);
+    box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.75);
+}
+
+
+#EBtnContainer{
+    width: 30em;
+}
+
+#userpanelHead{
+    display: inline;
+    height: 10%;
+    width: 20%;
+    margin: none;
+}
+
+.linkbox{
+    margin-top: 5%;
+    width: 45%;
+    height: 80%;
+    display: inline-block;
+    background-color: var(--menu1-color);
+}
+
+#activeLinksTable{
+    margin-right: 5%;
+}
+
+#inactiveLinks{
+    margin-left: 5%;
+}
+
+.linkTable{
+    display: block;
+    height: 85%;
+    width: 20%;
+
+}
+
+/*#activeLinks{
+    width:50%;
+    max-height: 40px;
+    overflow: hidden;
+    border: solid 2px black;
+}
+*/
+
+th, td{
+    border: solid 2px var(--verydark1-color);
+    
+}
+
+.tableCell{
+    height: 4em;
+    word-break: break-all;
+    overflow: hidden;
+    font-size: .65em;
+}
+
+.selectRow{
+    width: 4em;
+    height: 4em;
+    font-size: .65em;
+}
+
+#longTD{
+    width: 30em;
+}
+
+#mediumTD{
+    width: 15em;
+}
+
+#smallTD{
+    width: 5em;
+}
+
+#tinyTD{
+    width: 3em;
+}
+
